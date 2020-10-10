@@ -1,6 +1,8 @@
 ﻿using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GestorDeRede : MonoBehaviourPunCallbacks
@@ -25,5 +27,35 @@ public class GestorDeRede : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("Conexão bem Sucedida.");
+    }
+
+    public void CriaSala(string nomeSala)
+    {
+        PhotonNetwork.CreateRoom(nomeSala);
+    }
+
+    public void EntraSala(string nomeSala)
+    {
+        PhotonNetwork.JoinRoom(nomeSala);
+    }
+
+    public void MudaNick(string nickname)
+    {
+        PhotonNetwork.NickName = nickname;
+    }
+
+    public string ObterListaDeJogadores()
+    {
+        var lista = "";
+        foreach(var player in PhotonNetwork.PlayerList)
+        {
+            lista += player.NickName + "\n";
+        }
+        return lista;
+    }
+
+    public bool DonoDaSala()
+    {
+        return PhotonNetwork.IsMasterClient;
     }
 }
