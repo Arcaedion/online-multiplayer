@@ -58,4 +58,15 @@ public class GestorDeRede : MonoBehaviourPunCallbacks
     {
         return PhotonNetwork.IsMasterClient;
     }
+
+    public void SairDoLobby()
+    {
+        PhotonNetwork.LeaveRoom();
+    }
+
+    [PunRPC]
+    public void ComecaJogo(string nomeCena)
+    {
+        PhotonNetwork.LoadLevel(nomeCena);
+    }
 }

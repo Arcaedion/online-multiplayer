@@ -1,6 +1,6 @@
-﻿using Photon.Pun;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +15,5 @@ public class MenuLobby : MonoBehaviourPunCallbacks
         _listaDeJogadores.text = GestorDeRede.Instancia.ObterListaDeJogadores();
         _comecaJogo.interactable = GestorDeRede.Instancia.DonoDaSala();
     }
-
 
 }

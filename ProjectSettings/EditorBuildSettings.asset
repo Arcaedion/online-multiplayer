@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Packages/com.arcaedion.multiplayer.example/Editor/Cenas/Menu.unity
+    guid: 0cc35e08360eead448ebd0cce3bc3c1b
+  - enabled: 1
+    path: Packages/com.arcaedion.multiplayer.example/Editor/Cenas/JogoMain.unity
+    guid: 6c6a4544f345db04a8a2f7cb9113b0a4
   m_configObjects: {}

@@ -39,4 +39,15 @@ public class Menu : MonoBehaviourPunCallbacks
     {
         _menuLobby.AtualizaLista();
     }
+
+    public void SairDoLobby()
+    {
+        GestorDeRede.Instancia.SairDoLobby();
+        MudaMenu(_menuEntrada.gameObject);
+    }
+
+    public void ComecaJogo(string nomeCena)
+    {
+        GestorDeRede.Instancia.photonView.RPC("ComecaJogo", RpcTarget.All, nomeCena);
+    }
 }
