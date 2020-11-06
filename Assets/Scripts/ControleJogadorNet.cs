@@ -1,4 +1,5 @@
 ﻿using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 
 namespace Arcaedion.Multiplayer { 
@@ -14,6 +15,11 @@ namespace Arcaedion.Multiplayer {
         private Camera _camera;
 
         public Rigidbody Rb { get => _rb; set => _rb = value; }
+
+        public void Inicializa(Player player)
+        {
+
+        }
 
         private void Start()
         {
