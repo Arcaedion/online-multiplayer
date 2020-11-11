@@ -11,14 +11,23 @@ namespace Arcaedion.Multiplayer {
         [SerializeField] private float _forcaDoPulo = 300;
         [SerializeField] private Rigidbody _rb;
 
+
         private ControleJogador _jogador = null;
         private Camera _camera;
+        private Player _photonPlayer;
+        private int _id;
 
         public Rigidbody Rb { get => _rb; set => _rb = value; }
 
+        [PunRPC]
         public void Inicializa(Player player)
         {
+            _photonPlayer = player;
+            _id = player.ActorNumber;
+            GameManager.Instancia.Jogadores.Add(this);
 
+            if (!photonView.IsMine)
+                Rb.isKinematic = true;
         }
 
         private void Start()
