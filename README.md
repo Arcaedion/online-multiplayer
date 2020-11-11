@@ -5,6 +5,8 @@
 
 Um projeto base para usar no curso de desenvolvimento de jogos multiplayer online.
 
+[Assista ao curso totalmente gratuito!](https://www.youtube.com/watch?v=FLj_sFoG0mA&list=PLsTmpCmfnjZdWJ7xe5NFzLZOvtAZXo1B6)
+
 ## Servidor do Discord
 
 Dúvidas? Procure ajuda no nosso Discord: https://discord.gg/kEjJ8ax
